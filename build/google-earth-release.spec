@@ -20,10 +20,10 @@ Google Earth repository configuration.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
-install -m 644 %{SOURCE0} $RPM_BUILD_ROOT/etc/yum.repos.d/
+install -m 644 google-earth.repo $RPM_BUILD_ROOT/etc/yum.repos.d/
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
-install -m 644 %{SOURCE1} $RPM_BUILD_ROOT/etc/pki/rpm-gpg/
+install -m 644 RPM-GPG-KEY-google-earth $RPM_BUILD_ROOT/etc/pki/rpm-gpg/
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,14 +1,13 @@
-Name:		google-earth-release
-Version:	1.0
-Release:	1%{?dist}
-Summary:	Google Earth repository configuration
+Name:   google-earth-release
+Version:  1.0
+Release:  1%{?dist}
+Summary:  Google Earth repository configuration
 
-Group:	System Environment/Base
-License:	BSD
-URL:		http://google.com/earth
-Source0:	google-earth.repo
-Source1:	RPM-GPG-KEY-google-earth
-BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+Group:  System Environment/Base
+License:  BSD
+URL:    http://google.com/earth
+Source0:  %{name}-%{version}.tar.gz
+BuildRoot:  %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildArch: noarch
 
@@ -16,6 +15,7 @@ BuildArch: noarch
 Google Earth repository configuration.
 
 %prep
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT

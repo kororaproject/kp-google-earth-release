@@ -3,4 +3,4 @@ name=Google Earth
 baseurl=http://dl.google.com/linux/earth/rpm/stable/$basearch
 enabled=1
 gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-google-earth

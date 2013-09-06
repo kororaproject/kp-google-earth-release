@@ -1,6 +1,6 @@
 Name:   google-earth-release
 Version:  1.0
-Release:  1%{?dist}.1
+Release:  1%{?dist}.2
 Summary:  Google Earth repository configuration
 
 Group:  System Environment/Base
@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc
 /etc/pki/rpm-gpg/RPM-GPG-KEY-google-earth
-%(config noreplace) /etc/yum.repos.d/google-earth.repo
+%config(noreplace) /etc/yum.repos.d/google-earth.repo
 
 %changelog
 * Mon Dec 26 2011 Chris Smart <chris@kororaa.org> - 1.0

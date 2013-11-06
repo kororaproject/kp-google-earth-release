@@ -1,6 +1,6 @@
 Name:   google-earth-release
 Version:  1.0
-Release:  2%{?dist}
+Release:  3%{?dist}
 Summary:  Google Earth repository configuration
 
 Group:  System Environment/Base
@@ -36,6 +36,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/google-earth.repo
 
 %changelog
+* Wed Oct 6 2013 Chris Smart <csmart@kororaproject.org> - 1.0-3
+- Working GPG key
+
 * Sat Sep 7 2013 Chris Smart <csmart@kororaproject.org> - 1.0-2
 - Disable repo by default, this way we include it in ks, but users
 - just need to enable it to work
